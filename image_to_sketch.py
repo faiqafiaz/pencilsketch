@@ -16,15 +16,15 @@ def pencilsketch(inp_img):
     final_img = dodgeV2(img_gray, img_smoothing)
     return(final_img)
 
-st.title("PencilSketcher App")
-st.write("This Web App is to help convert your photos to realistic Pencil Sketches")
-file_image = st.sidebar.file_uploader("Upload your Photos", type=['jpeg','jpg','png'])
+st.title("Convert Image To Pencil Sketch")
+st.write("This Web App is to help convert your images to realistic Pencil Sketches")
+file_image = st.sidebar.file_uploader("Upload the image", type=['jpeg','jpg','png'])
 if file_image is None:
-    st.write("You haven't uploaded any image file")
+    st.write("Please Upload the image!!")
 else:
     input_img = Image.open(file_image)
     final_sketch = pencilsketch(np.array(input_img))
-    st.write("**Input Photo**")
+    st.write("**Your Image**")
     st.image(input_img, use_column_width=True)
     st.write("**Output Pencil Sketch**")
     st.image(final_sketch, use_column_width=True)
