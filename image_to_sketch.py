@@ -15,7 +15,7 @@ def pencilsketch(inp_img):
     img_smoothing = cv2.GaussianBlur(img_invert, (21, 21),sigmaX=0, sigmaY=0)
     final_img = dodgeV2(img_gray, img_smoothing)
     return(final_img)
-image = Image.open('sir.jpg')
+image = Image.open('sir.jpeg')
 
 st.image(image, width=50, use_column_width="auto", output_format="auto")
 st.title("Convert Image To Pencil Sketch")
