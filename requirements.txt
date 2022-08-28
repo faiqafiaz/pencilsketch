@@ -1,1 +1,5 @@
+pip==22.2 
+numpy~=1.19.2
 streamlit
+Pillow==9.0.1
+opencv-python
