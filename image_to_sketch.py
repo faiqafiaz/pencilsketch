@@ -13,7 +13,6 @@ st.set_page_config(
     page_title="Image to Pencil Sketch",
     page_icon="👋",
 )
-st.markdown("DEMO")
 st.sidebar.markdown("# DEMO")
 #convert into sketch
 def pencilsketch(inp_image):
