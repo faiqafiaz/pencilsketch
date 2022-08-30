@@ -1,8 +1,6 @@
 
 
 #Image to Pencil sketch app
-from multiapp import MultiApp
-import DEMO
 import streamlit as st
 import numpy as np
 from PIL import Image
@@ -15,10 +13,6 @@ st.set_page_config(
     page_title="Image to Pencil Sketch",
     page_icon="👋",
 )
-app = MultiApp()
-app.add_app("DEMO",DEMO.app)
-app.run()
-#st.sidebar.markdown("# DEMO")
 #convert into sketch
 def pencilsketch(inp_image):
     image_gray = cv2.cvtColor(inp_image, cv2.COLOR_BGR2GRAY)
@@ -26,10 +20,6 @@ def pencilsketch(inp_image):
     image_smoothing = cv2.GaussianBlur(image_invert, (21, 21),sigmaX=0, sigmaY=0)
     final_image = dodgeV2(image_gray, image_smoothing)
     return(final_image)
-#image = Image.open('sir.jpeg')
-#st.image(image, width=30, use_column_width="auto", output_format="auto")
-#image1 = Image.open('pencil.jpeg')
-#st.image(image1, width=50, use_column_width="auto", output_format="auto")
 st.title("Convert Image To Pencil Sketch")
 st.write("This Web App is to help convert your images to realistic Pencil Sketches")
 file_image = st.sidebar.file_uploader("Upload the image", type=['jpeg','jpg','png'])
