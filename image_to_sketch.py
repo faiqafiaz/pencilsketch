@@ -6,13 +6,14 @@ import numpy as np
 from PIL import Image
 import cv2
 import pencil_image
-st.set_option('deprecation.showfileUploaderEncoding', False)
+
 
 
 #convert into sketch
 def app():
     st.title("Convert Image To Pencil Sketch")
     st.set_page_config(page_title="Image to Pencil Sketch",page_icon="👋")
+    st.set_option('deprecation.showfileUploaderEncoding', False)
     st.write("This Web App is to help convert your images to realistic Pencil Sketches")
     file_image = st.sidebar.file_uploader("Upload the image", type=['jpeg','jpg','png'])
     if file_image is None:
