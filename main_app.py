@@ -1,6 +1,6 @@
 import streamlit as st
 from multiapp import MultiApp
-import DEMO, image_to_sketch
+import image_to_sketch, DEMO
 app = MultiApp()
 
 # Add all your application here
