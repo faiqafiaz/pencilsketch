@@ -2,7 +2,7 @@
 
 #Image to Pencil sketch app
 from multiapp import MultiApp
-import 
+import DEMO
 import streamlit as st
 import numpy as np
 from PIL import Image
