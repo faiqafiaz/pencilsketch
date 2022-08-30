@@ -21,6 +21,7 @@ def pencilsketch(inp_img):
 #st.image(image1, width=50, use_column_width="auto", output_format="auto")
 st.title("Convert Image To Pencil Sketch")
 st.write("This Web App is to help convert your images to realistic Pencil Sketches")
+st.markdown("*Demo*")
 file_image = st.sidebar.file_uploader("Upload the image", type=['jpeg','jpg','png'])
 if file_image is None:
     st.write("Please Upload the image!!")
