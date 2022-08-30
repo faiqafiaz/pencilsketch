@@ -43,5 +43,5 @@ class MultiApp:
             'Go To',
             self.apps,
             format_func=lambda app: app['title'])
-
-        
+ 
+        app['function']()
