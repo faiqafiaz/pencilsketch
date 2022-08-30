@@ -5,7 +5,7 @@ import streamlit as st
 import numpy as np
 from PIL import Image
 import cv2
-import dodgeV
+import dodgeV2
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 
