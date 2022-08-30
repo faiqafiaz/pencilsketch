@@ -1,7 +1,8 @@
 
 
 #Image to Pencil sketch app
-import DEMO
+from multiapp import MultiApp
+import 
 import streamlit as st
 import numpy as np
 from PIL import Image
@@ -14,12 +15,7 @@ st.set_page_config(
     page_title="Image to Pencil Sketch",
     page_icon="👋",
 )
-PAGES = {
-    "DEMO": demo
-}
-selection = st.sidebar.radio("Go to", list(PAGES.keys()))
-page = PAGES[selection]
-page.app()
+app.add_app("DEMO", DEMO)
 #st.sidebar.markdown("# DEMO")
 #convert into sketch
 def pencilsketch(inp_image):
