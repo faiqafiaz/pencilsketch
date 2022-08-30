@@ -16,9 +16,9 @@ def app():
     st.set_page_config(page_title="Image to Pencil Sketch",page_icon="👋")
     st.write("This Web App is to help convert your images to realistic Pencil Sketches")
     file_image = st.sidebar.file_uploader("Upload the image", type=['jpeg','jpg','png'])
-     if file_image is None:
-            st.write("Please Upload the image!!")
-      else:
+    if file_image is None:
+        st.write("Please Upload the image!!")
+    else:
         input_image = Image.open(file_image)
         final_sketch = pencil_image(np.array(input_image))
         st.write("**Your Image**")
