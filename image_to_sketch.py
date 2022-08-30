@@ -20,7 +20,7 @@ def app():
             st.write("Please Upload the image!!")
       else:
         input_image = Image.open(file_image)
-        final_sketch = app(np.array(input_image))
+        final_sketch = pencil_image(np.array(input_image))
         st.write("**Your Image**")
         st.image(input_image, use_column_width=True)
         st.write("**Output Pencil Sketch**")
