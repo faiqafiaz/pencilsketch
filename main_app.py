@@ -8,4 +8,4 @@ app.add_app("Home", image_to_sketch.app)
 app.add_app("Demo", DEMO.app)
 
 # The main app
-#app.run()
+main_app.run()
