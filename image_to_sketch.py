@@ -15,7 +15,7 @@ st.set_page_config(
     page_title="Image to Pencil Sketch",
     page_icon="👋",
 )
-app.add_app("DEMO", DEMO)
+app.add_app("DEMO", DEMO.app)
 #st.sidebar.markdown("# DEMO")
 #convert into sketch
 def pencilsketch(inp_image):
