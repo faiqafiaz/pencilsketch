@@ -1,6 +1,7 @@
 
 
 #Image to Pencil sketch app
+import DEMO
 import streamlit as st
 import numpy as np
 from PIL import Image
@@ -13,7 +14,13 @@ st.set_page_config(
     page_title="Image to Pencil Sketch",
     page_icon="👋",
 )
-st.sidebar.markdown("# DEMO")
+PAGES = {
+    "DEMO": demo
+}
+selection = st.sidebar.radio("Go to", list(PAGES.keys()))
+page = PAGES[selection]
+page.app()
+#st.sidebar.markdown("# DEMO")
 #convert into sketch
 def pencilsketch(inp_image):
     image_gray = cv2.cvtColor(inp_image, cv2.COLOR_BGR2GRAY)
