@@ -1,3 +1,4 @@
+import dodgeV2
 def pencil_image(inp_image):
     image_gray = cv2.cvtColor(inp_image, cv2.COLOR_BGR2GRAY)
     image_invert = cv2.bitwise_not(image_gray)
